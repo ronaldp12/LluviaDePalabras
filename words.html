@@ -5,20 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLuvia de Palabras</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container-word">
-        <h2>Tiempo </h2>
 
-        <h3>Jugador</h3>
-        <h3>Letra seleccionada </h3>
+        <div class="arrow-back">
+            <a href="index.html"><i class='bx bx-arrow-back'></i></a>
+        </div>
+        
 
-        <input type="text">
+        <div class="info-game">
+            <h2>Tiempo: 60 segundos </h2>
+            <h3>Jugador: 1</h3>
+            <button class="btn">Comenzar Turno</button>
+        </div>
+        
+        <div class="enter-word">
+            <input type="text" placeholder="Ingresa una palabra">
+            <button class="btn">Agregar Palabra</button>
+        </div>
 
-        <h3>Puntaje</h3>
+        <div class="result">
+            <h3>Puntaje:</h3>
+            <p id="mensaje"></p>
+        </div>
+        
+        <div class="container-list">
+            <h3>Lista de palabras:</h3>
+            <ul></ul>
+        </div>
 
-        <h3>Lista</h3>
+        
         
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

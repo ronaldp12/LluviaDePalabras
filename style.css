@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Silkscreen", serif;
+    
 }
 
 body {
@@ -77,10 +77,12 @@ h1 {
     justify-content: center;
     gap: 1.5rem;  
     width: 100%;
+    
 }
 
 .btn-players {
     border-radius: 4rem;
+    text-transform: uppercase;
     width: 80%; 
     height: 4rem;
     font-size: 1.2rem;
@@ -89,6 +91,7 @@ h1 {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: "Silkscreen", serif;
 }
 
 .btn-players> a {
@@ -116,11 +119,100 @@ h1 {
 
 
 .container-word {
-    width: 70%;
-    height: 4rem;
+    width: 85%;
+    height: 80%;
     margin-top: 4rem;
-    margin-left: 3.5rem;
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    font-family: "Grandstander", serif;
+}
+
+.info-game{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.8rem;
+}
+
+.info-game>h2{
+    margin-bottom: 0.7rem;
+}
+
+.info-game>h3{
+    margin-bottom: 0.7rem;
+}
+
+.btn {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #d1d1d1;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    font-family: "Grandstander", serif;
+  }
+  
+  .btn:hover {
+    background-color: #b0b0b0;
+    box-shadow: 0px 15px 20px #888888;
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .btn:active {
+    transform: translateY(-1px);
+  }
+
+.enter-word{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.enter-word >input{
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+    background: transparent;
+    color: #2e2e2e;
+    text-align: center;
+    transition: border-color 0.3s ease;
+    font-family: "Grandstander", serif;
+}
+
+.enter-word>input:focus{
+    border-color: #4f4f4f;
+}
+
+.arrow-back{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.bx-arrow-back{
+    font-size: 1.5rem;
+    transition: all 0.3s ease 0s;
+    color: #000000;
+}
+
+.bx-arrow-back:hover{
+    transform: translateY(-3px);
+}
+
+.bx-arrow-back:active{
+    transform: translateY(-1px);
 }
 
 
