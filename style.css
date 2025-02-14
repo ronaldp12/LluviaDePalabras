@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Silkscreen", serif;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(/assets/images/background2.png);
+    display: flex;
+    justify-content: center;
+}
+
+.henny-penny-regular {
+    font-family: "Henny Penny", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dynapuff-text {
+    font-family: "DynaPuff", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.silkscreen-regular {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.silkscreen-bold {
+    font-family: "Silkscreen", serif;
+    font-weight: 700;
+    font-style:normal;
+}
+
+.grandstander {
+    font-family: "Grandstander", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style:normal;
+  }
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Grandstander", serif;
+}
+
+.container-main {
+    margin-top: 4rem;
+    width: 85%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 8%;
+    padding: 2rem;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 1.5rem;  
+    width: 100%;
+}
+
+.btn-players {
+    border-radius: 4rem;
+    width: 80%; 
+    height: 4rem;
+    font-size: 1.2rem;
+    background-color: #d1d1d1;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-players> a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-players:hover {
+    background-color: #b0b0b0;
+    color: #000000;
+}
+
+.btn-players:active{
+    background-color: #888888;
+    color: #000000;
+}
+
+
+
+
+.container-word {
+    width: 70%;
+    height: 4rem;
+    margin-top: 4rem;
+    margin-left: 3.5rem;
+    background-color: aliceblue;
+}
+
+
+
+
+@media (min-width:394px) and (max-width: 431px) {
+    .container-main{
+        width: 85%;
+        height: 60%;
+    }
+}
