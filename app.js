@@ -120,15 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function announceWinner() {
         let maxScore = Math.max(...playersScores);
         let winners = playersScores.map((score, index) => (score === maxScore ? index + 1 : null)).filter(v => v !== null);
-
-        let message = winners.length > 1 ? `🤝 ¡Empate entre jugadores ${winners.join(", ")} con ${maxScore} palabras!` :
-            `🏆 ¡El ganador es el Jugador ${winners[0]} con ${maxScore} palabras! 🏆`;
-
-        statusMessage.textContent = message;
-
-        setTimeout(restartGame, 5000);
+    
+        let message = winners.length > 1 
+            ? `🤝 ¡Empate entre jugadores ${winners.join(", ")} con ${maxScore} palabras!` 
+            : `🏆 ¡El ganador es el Jugador ${winners[0]} con ${maxScore} palabras! 🏆`;
+    
+        statusMessage.textContent = message; // Muestra el mensaje del ganador
+        startButton.disabled = false; 
+        startButton.textContent = "Reiniciar Partida"; // Cambia el botón para indicar que es un reinicio
     }
-
+    
     function restartGame() {
         currentPlayer = 1;
         playersScores = Array(numPlayers).fill(0);
@@ -137,9 +138,23 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDisplay.textContent = "";
         wordInput.value = "";
         startButton.disabled = false;
+        startButton.textContent = "Comenzar Turno"; // Restaura el texto del botón
         playerDisplay.textContent = `Jugador: ${currentPlayer}`;
         statusMessage.textContent = `Jugador ${currentPlayer}, presiona "Comenzar Turno".`;
     }
+    
+    if (startButton) {
+        startButton.addEventListener("click", () => {
+            if (!isTurnActive) {
+                if (startButton.textContent === "Reiniciar Partida") {
+                    restartGame(); // Si ya terminó la partida, la reiniciamos
+                }
+                startTurn(); // Inicia un nuevo turno
+                startButton.disabled = true;
+            }
+        });
+    }
+    
 
     function getRandomLetter() {
         const alphabet = "abcdefghijklmnopqrstuvwxyz";
