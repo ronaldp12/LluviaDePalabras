@@ -145,6 +145,10 @@ h1 {
     margin-bottom: 0.7rem;
 }
 
+.info-game>h4{
+    margin-bottom: 1rem;
+}
+
 .btn {
     padding: 1.3em 3em;
     font-size: 12px;
