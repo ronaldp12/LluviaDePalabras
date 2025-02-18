@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let isTurnActive = false;
 
     const statusMessage = document.querySelector(".status-message");
-    const playerDisplay = document.querySelector(".info-game h3");
-    const timerDisplay = document.querySelector(".info-game h2");
+    const playerDisplay = document.querySelector(".info-game h4");
+    const timerDisplay = document.querySelector(".info-game h3");
     const wordInput = document.querySelector(".enter-word input");
     const addButton = document.querySelector(".enter-word button");
     const wordListDisplay = document.querySelector(".container-list ul");
