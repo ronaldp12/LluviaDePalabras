@@ -134,7 +134,7 @@ h1 {
 .info-game{
     width: 100%;
     height: auto;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.2rem;
 }
 
 .info-game>h2{
@@ -191,7 +191,6 @@ h1 {
     width: 80%;
     margin-bottom: 10px;
     background: transparent;
-    color: #2e2e2e;
     text-align: center;
     transition: border-color 0.3s ease;
     font-family: "Grandstander", serif;

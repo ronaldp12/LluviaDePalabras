@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Selección de número de jugadores desde index.html
     const playerButtons = document.querySelectorAll(".btn-players");
 
     if (playerButtons) {
@@ -125,9 +124,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `🤝 ¡Empate entre jugadores ${winners.join(", ")} con ${maxScore} palabras!` 
             : `🏆 ¡El ganador es el Jugador ${winners[0]} con ${maxScore} palabras! 🏆`;
     
-        statusMessage.textContent = message; // Muestra el mensaje del ganador
+        statusMessage.textContent = message;
         startButton.disabled = false; 
-        startButton.textContent = "Reiniciar Partida"; // Cambia el botón para indicar que es un reinicio
+        startButton.textContent = "Reiniciar Partida"; 
     }
     
     function restartGame() {
@@ -138,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDisplay.textContent = "";
         wordInput.value = "";
         startButton.disabled = false;
-        startButton.textContent = "Comenzar Turno"; // Restaura el texto del botón
+        startButton.textContent = "Comenzar Turno"; 
         playerDisplay.textContent = `Jugador: ${currentPlayer}`;
         statusMessage.textContent = `Jugador ${currentPlayer}, presiona "Comenzar Turno".`;
     }
@@ -147,9 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
         startButton.addEventListener("click", () => {
             if (!isTurnActive) {
                 if (startButton.textContent === "Reiniciar Partida") {
-                    restartGame(); // Si ya terminó la partida, la reiniciamos
+                    restartGame(); 
                 }
-                startTurn(); // Inicia un nuevo turno
+                startTurn(); 
                 startButton.disabled = true;
             }
         });
