@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let word = wordInput.value.trim().toLowerCase();
     
         if (word === "") {
-            statusMessage.textContent = `⚠️ No puedes dejar el campo vacío. Debes escribir una palabra.`;
+            statusMessage.textContent = `⚠️ No puedes dejar el campo vacío. Debes escribir una palabra que empiece por: ${currentLetter.toUpperCase()}`;
             return;
         }
 
