@@ -81,20 +81,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function addWord() {
         if (!isTurnActive) return;
-
+    
         let word = wordInput.value.trim().toLowerCase();
-        if (!word) return;
+    
+        if (word === "") {
+            statusMessage.textContent = `⚠️ No puedes dejar el campo vacío. Debes escribir una palabra.`;
+            return;
+        }
 
+        // Validar que la palabra no sea solo la letra asignada
+        if (word.length === 1 && word === currentLetter) {
+            statusMessage.textContent = `⚠️ No puedes ingresar solo la letra "${currentLetter.toUpperCase()}". Debes escribir una palabra completa.`;
+            return;
+        }
+    
+        // Validar que la palabra comience con la letra asignada
         if (word[0] !== currentLetter) {
             statusMessage.textContent = `⚠️ La palabra debe comenzar con "${currentLetter.toUpperCase()}".`;
             return;
         }
-
+    
+        // Validar que la palabra no esté repetida
         if (playersWords[currentPlayer - 1].includes(word)) {
             statusMessage.textContent = "⚠️ Esta palabra ya fue ingresada.";
             return;
         }
-
+    
+        // Agregar palabra a la lista del jugador
         playersWords[currentPlayer - 1].push(word);
         let listItem = document.createElement("li");
         listItem.textContent = word;
@@ -102,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDisplay.textContent = `Palabras ingresadas: ${playersWords[currentPlayer - 1].length}`;
         wordInput.value = "";
     }
+    
 
     function announceWinner() {
         let maxScore = Math.max(...playersScores);
