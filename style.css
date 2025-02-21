@@ -223,6 +223,10 @@ h1 {
     margin-bottom: 0.6rem;
 }
 
+.container-list >ul{
+    list-style: none;
+}
+
 
 
 
